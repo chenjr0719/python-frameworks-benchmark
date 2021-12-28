@@ -8,7 +8,7 @@ services:
       - POSTGRES_USER=render
       - POSTGRES_DB=render
 
-  django:
+  server:
     restart: always
     build: .
     ports:
@@ -20,4 +20,10 @@ services:
       - DEBUG=''
       - DATABASE_URL=postgres://render:render@postgres:5432/render
       - DJANGO_SETTINGS_MODULE=django_perfomance.settings
-  
+
+  wrk:
+    image: williamyeh/wrk
+    restart: always
+    depends_on:
+      - server
+    command: -t12 -c400 -d30s http://server:8080/db

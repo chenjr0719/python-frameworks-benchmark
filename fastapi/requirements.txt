@@ -1,0 +1,5 @@
+# asyncpg==0.18.2
+databases[postgresql]==0.3.2
+fastapi==0.55.1
+uvloop==0.11.3
+uvicorn==0.11.5

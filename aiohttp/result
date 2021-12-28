@@ -1,0 +1,9 @@
+Running 30s test @ http://server:8080/db
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   133.79ms  119.95ms   1.72s    58.51%
+    Req/Sec   283.84     70.36   545.00     68.53%
+  101721 requests in 30.04s, 22.21MB read
+  Socket errors: connect 0, read 0, write 0, timeout 9
+Requests/sec:   3385.78
+Transfer/sec:    757.17KB

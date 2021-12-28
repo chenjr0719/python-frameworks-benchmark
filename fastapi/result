@@ -1,0 +1,19 @@
+Running 30s test @ http://sanic:8080/db
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   276.52ms  323.63ms   2.00s    85.48%
+    Req/Sec   169.89    177.31     0.96k    84.80%
+  59820 requests in 30.01s, 11.24MB read
+  Socket errors: connect 0, read 0, write 0, timeout 108
+Requests/sec:   1993.31
+Transfer/sec:    383.48KB
+
+Running 30s test @ http://server:8080/db
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   205.27ms  213.51ms   2.00s    86.80%
+    Req/Sec   195.98     95.58     1.28k    74.97%
+  68720 requests in 30.06s, 12.91MB read
+  Socket errors: connect 0, read 0, write 0, timeout 21
+Requests/sec:   2285.75
+Transfer/sec:    439.74KB
